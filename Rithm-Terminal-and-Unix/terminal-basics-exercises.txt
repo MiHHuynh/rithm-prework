@@ -1,0 +1,97 @@
+Terminal Navigation: Questions to Answer
+
+What is the difference between / and ~? What do we call each of these directories?
+
+/ is the root directory while ~ is the home directory, or the directory for your user account. / is a level above ~.
+
+What command do we use to change directories?
+
+cd will change directories.
+
+What is the difference between an absolute and relative path?
+
+An absolute path lists the entire trail that leads to the directory you want, starting with /, the root. A relative path is relative to where you are currently. It assumes you are just tacking on more folder(s) after the path of the current directory.
+
+_____
+
+Working with Files & Folders: Exercises
+
+-Create a file called name.txt.
+
+touch name.txt
+
+-Try renaming the file to rename.txt using the mv command. What does this tell you about the command?
+
+mv name.txt rename.txt
+If you don't want to move the file anywhere, you can just rename it in its current directory.
+
+-Using the cp command, make a copy of rename.txt and call it copy.txt.
+
+cp rename.txt copy.txt
+
+-Remove the file copy.txt.
+
+rm copy.txt
+
+-Create a folder called questions.
+
+mkdir questions
+
+-Change directories to the questions folder.
+
+cd questions
+
+-Create a file called first.txt.
+
+touch first.txt
+
+-Create a file called second.txt.
+
+touch second.txt
+
+-Go back a directory and make a copy of the questions folder and call it questions_copy.
+
+cd ..
+cp -r questions questions_copy
+
+-When using cp -r what is the -r called? What does it do?
+
+The -r is a flag. It passes options to the command.
+
+-Delete the original questions folder and the copy.
+
+rm -rf questions
+rm -rf questions_copy
+
+_____
+
+Terminal Basics Exercises
+
+
+Write the following terminal commands to perform the following tasks:
+
+Part I
+make a directory called first
+change directory to the first folder
+create a file called person.txt
+change the name of person.txt to another.txt
+make a copy of the another.txt file and call it copy.txt
+remove the copy.txt file
+make a copy of the first folder and call it second
+delete the second folder
+
+Part II
+What does the man command do? Type in man rm. How do you scroll and get out?
+Look at the man page for ls. What does the -l flag do? What does the -a flag do?
+Type the following command to download and save the contents of google.com: curl https://www.google.com > google.html
+Use less to look at the contents of google.html.
+Look at the man page for less. Read the section on /pattern. Search for the text hplogo in the google.html file.
+How do you jump between words in the terminal?
+How do you get to the end of a line in terminal?
+How do you move your cursor to the beginning in terminal?
+How do you delete a word (without pressing backspace multiple times) in terminal?
+What is the difference between a terminal and shell?
+What is an absolute path?
+What is an relative path?
+What is a flag? Give three examples of flags you have used.
+What do the r and f flags do with the rm command?
