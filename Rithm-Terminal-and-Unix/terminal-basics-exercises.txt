@@ -67,31 +67,92 @@ _____
 
 Terminal Basics Exercises
 
-
 Write the following terminal commands to perform the following tasks:
 
 Part I
-make a directory called first
-change directory to the first folder
-create a file called person.txt
-change the name of person.txt to another.txt
-make a copy of the another.txt file and call it copy.txt
-remove the copy.txt file
-make a copy of the first folder and call it second
-delete the second folder
+-make a directory called first
+
+mkdir first
+
+-change directory to the first folder
+
+cd first
+
+-create a file called person.txt
+
+touch person.txt
+
+-change the name of person.txt to another.txt
+
+mv person.txt another.txt
+
+-make a copy of the another.txt file and call it copy.txt
+
+cp another.txt copy.txt
+
+-remove the copy.txt file
+
+rm copy.txt
+
+-make a copy of the first folder and call it second
+
+cd ..
+cp -r first second
+
+-delete the second folder
+
+rm -rf second
 
 Part II
-What does the man command do? Type in man rm. How do you scroll and get out?
-Look at the man page for ls. What does the -l flag do? What does the -a flag do?
-Type the following command to download and save the contents of google.com: curl https://www.google.com > google.html
-Use less to look at the contents of google.html.
-Look at the man page for less. Read the section on /pattern. Search for the text hplogo in the google.html file.
-How do you jump between words in the terminal?
-How do you get to the end of a line in terminal?
-How do you move your cursor to the beginning in terminal?
-How do you delete a word (without pressing backspace multiple times) in terminal?
-What is the difference between a terminal and shell?
-What is an absolute path?
-What is an relative path?
-What is a flag? Give three examples of flags you have used.
-What do the r and f flags do with the rm command?
+-What does the man command do? Type in man rm. How do you scroll and get out?
+
+man shows the information manual for whichever command you want to read about. You scroll using the arrow keys and exit by typing q.
+
+-Look at the man page for ls. What does the -l flag do? What does the -a flag do?
+
+The -l flag lists things in "long version." -a lists directories that begin with a '.'
+
+-Type the following command to download and save the contents of google.com: curl https://www.google.com > google.html
+-Use less to look at the contents of google.html.
+
+less google.html
+
+-Look at the man page for less. Read the section on /pattern. Search for the text hplogo in the google.html file.
+
+/hplogo
+
+-How do you jump between words in the terminal?
+
+alt/option + L/R arrow key
+
+-How do you get to the end of a line in terminal?
+
+control + E
+
+-How do you move your cursor to the beginning in terminal?
+
+control + A
+
+-How do you delete a word (without pressing backspace multiple times) in terminal?
+
+control + W
+
+-What is the difference between a terminal and shell?
+
+The shell is a program that processes the commands, inputs, and outputs. The terminal is an outer program that houses the shell.
+
+-What is an absolute path?
+
+An absolute path is an entire trail to a file or folder, starting at the root.
+
+-What is an relative path?
+
+A relative path is a path that builds off of where you currently are located (in a folder, etc.).
+
+-What is a flag? Give three examples of flags you have used.
+
+A flag is an extra, optionl input you can pass with a command to give more options on what you want the command to do. Some flags are -r, -l, and -f.
+
+-What do the r and f flags do with the rm command?
+
+-r "attempts to remove the file hierarchy rooted in each file argument." It runs the command recursively from the lowest level (like the files, if there are any) through the file or directory you specified. The -f flag "attempts to remove the files without prompting for confirmation."
