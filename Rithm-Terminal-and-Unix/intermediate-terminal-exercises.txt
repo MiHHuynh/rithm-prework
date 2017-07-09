@@ -1,0 +1,105 @@
+{ Intermediate Terminal Exercises. }
+
+Part I
+Answer the following questions:
+
+-Create an environment variable called FIRST_NAME and set it equal to your first name (this does not need to be permanent)
+
+export FIRST_NAME=Michelle
+
+-Print the FIRST_NAME variable
+
+echo $FIRST_NAME
+
+-Print out the $PATH variable
+
+echo $PATH
+
+-What is the $PATH variable?
+
+The $PATH variable is where the terminal goes to find programs to execute.
+
+-Why would you want to create an environment variable?
+
+It is a useful way to save information about the environment you are working on.
+
+-How do you permanently save environment variables?
+
+You need to save the command into the shell configuration file in your home directory.
+
+-What is a process?
+
+A process is a program that is being run on your computer.
+
+-How do you list all processes running on your machine?
+
+You type the command "ps aux".
+
+-What is a PID?
+
+The PID is the process ID, which is a unique identifier for each process.
+
+-How do you terminate a process?
+
+kill <PID>
+
+-What is the difference between kill and kill -9?
+
+kill sends out a TERM signal by default. If a program has crashed or frozen, it is possible that the signal won't be received and the process will not terminate. kill -9 sends a "non-catchable, non-ignorable kill" signal.
+
+-What grep flag allows for case insensitive search?
+
+-i
+
+-What grep flag allows for a certain number of lines before the match?
+
+-B
+
+-What grep flag allows for a certain number of lines around the match?
+
+-C
+
+-What grep flag allows for a certain number of lines after the match?
+
+-A
+
+-What grep flag allows for full word search?
+
+-w
+
+-What grep flag shows you the line number of a match?
+
+-n
+
+_____
+
+Part II
+Write the following terminal commands to do the following (assume that instructors.txt is an imaginary file):
+
+-Find all files inside the Desktop folder that have a name of "learn."
+
+find ~/Desktop -name "learn"
+
+-Find all files inside the Desktop folder that start with a "P."
+
+find ~/Desktop -name "P.*"
+
+-Find all files inside the Desktop folder that end with .txt.
+
+find ~/Desktop -name "*.txt"
+
+-Find all files inside the Desktop/views folder that have the name data somewhere in their filename.
+
+find ~/Desktop -name "*data*"
+
+-Inside of the instructors.txt file, output the number of times the word "Elie" appears.
+
+grep -c "Elie" instructors.txt 
+
+-Inside of the instructors.txt file, list all matches for any full word that starts with a capital "P."
+
+grep -w "P.*" instructors.txt
+
+-Inside of the instructors.txt file, list all the line numbers for any full word that starts with a "z" (it should match regardless of upper or lower case).
+
+grep -ni "z.*" instructors.txt
