@@ -41,6 +41,8 @@ ln restricted.txt hard_link
 
 ln -s classified classified_link
 
+_____
+
 Part II (Piping and Redirection)
 For the following exercises, create a text file called vegetables.txt with the following text:
 
@@ -64,7 +66,21 @@ Dill
 Write the following terminal commands to do the following
 
 -Sort vegetables.txt.
+
+sort vegetables.txt
+
 -Count the number of lines in vegetables.txt.
+
+wc -l vegetables.txt
+
 -Create a file called vegetables_sorted.txt which contains all the unique vegetables sorted in ascending order in vegetables.txt (do this without the touch command).
+
+sort vegetables.txt | uniq > vegetables_sorted.txt
+
 -Create a file called last_three.txt which contains the last three vegetables in the vegetables.txt file (do this without the touch command).
+
+cat vegetables.txt | tail -n 3 > last_three.txt
+
 -Count the number of lines the word "Broccoli" appears on (using wc and grep).
+
+sort vegetables.txt | grep Broccoli | wc -l
