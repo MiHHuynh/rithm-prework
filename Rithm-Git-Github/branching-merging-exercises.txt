@@ -1,0 +1,59 @@
+Create a folder called destruction.
+cd into that folder.
+Initialize an empty git repository.
+Create a file called done.txt.
+Remove that file from the working directory (remember you can not use git checkout).
+Create a file called stage_me.txt.
+Add stage_me.txt file to the staging area.
+Move stage_me.txt file from the staging area to the working directory.
+Add stage_me.txt file to the staging area.
+Remove stage_me.txt from the staging area and the working directory.
+Create a new file called commit_me.txt.
+Add commit_me.txt to the staging area.
+Commit with the message "adding commit_me.txt".
+Create another file called second.txt.
+Add second.txt to the staging area.
+Commit with the message "adding second.txt".
+Check out your previous commits using git log --oneline to see the unique identifier or SHA for each of your commits.
+Using git reset, undo the previous commit and move your changes back to the working directory.
+Add second.txt again.
+Commit with the message "Trying to commit again".
+Using git reset undo the previous commit and move your changes back to the staging area.
+Commit with the message "Trying to commit again and again".
+Using git reset undo the previous commit so that any changes are not part of the working directory.
+Pat yourself on the back! You just went through a pretty complex git workflow!
+
+_____
+
+Create a folder called branch_time.
+cd into that folder.
+Initialize an empty git repository.
+Create a file called first.txt, then add and commit the file.
+Create a new branch called amazing_feature.
+Create a file called best.txt.
+Add the file.
+Commit the file with the message -m "added best.txt".
+Switch back to the master branch.
+Merge your changes from the feature branch into master.
+Delete the feature branch.
+
+_____
+
+{ Branching and Merging Exercises. }
+
+
+Part I
+Answer the following questions:
+
+What does git clean do?
+What do the -d and -f flags for git clean do?
+What git command creates a branch?
+What is the difference between a fast-forward and recursive merge?
+What git command changes to another branch?
+How do you remove modified or deleted files from the working directory?
+What git command deletes a branch?
+What does the git diff command do?
+How do you remove files from the staging area?
+How do merge conflicts happen?
+Part II
+Create your own merge conflict! Work on the same file on two separate branches and merge the two branches together. Fix the conflicts and finish your merge. In the real world you will never intentionally try to create merge conflicts, but it is important to understand how and why they are created. Most importantly, it's important not to be intimidated by merge conflicts, and to be able to fix them with confidence!
