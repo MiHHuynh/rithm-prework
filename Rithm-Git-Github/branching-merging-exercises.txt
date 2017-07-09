@@ -1,41 +1,146 @@
-Create a folder called destruction.
-cd into that folder.
-Initialize an empty git repository.
-Create a file called done.txt.
-Remove that file from the working directory (remember you can not use git checkout).
-Create a file called stage_me.txt.
-Add stage_me.txt file to the staging area.
-Move stage_me.txt file from the staging area to the working directory.
-Add stage_me.txt file to the staging area.
-Remove stage_me.txt from the staging area and the working directory.
-Create a new file called commit_me.txt.
-Add commit_me.txt to the staging area.
-Commit with the message "adding commit_me.txt".
-Create another file called second.txt.
-Add second.txt to the staging area.
-Commit with the message "adding second.txt".
-Check out your previous commits using git log --oneline to see the unique identifier or SHA for each of your commits.
-Using git reset, undo the previous commit and move your changes back to the working directory.
-Add second.txt again.
-Commit with the message "Trying to commit again".
-Using git reset undo the previous commit and move your changes back to the staging area.
-Commit with the message "Trying to commit again and again".
-Using git reset undo the previous commit so that any changes are not part of the working directory.
-Pat yourself on the back! You just went through a pretty complex git workflow!
+{ Checkout and Reset. }
+
+-Create a folder called destruction.
+
+mkdir destruction
+
+-cd into that folder.
+
+cd destruction
+
+-Initialize an empty git repository.
+
+git init
+
+-Create a file called done.txt.
+
+touch done.txt
+
+-Remove that file from the working directory (remember you can not use git checkout).
+
+git clean -df done.txt
+
+-Create a file called stage_me.txt.
+
+touch stage_me.txt
+
+-Add stage_me.txt file to the staging area.
+
+git add stage_me.txt
+
+-Move stage_me.txt file from the staging area to the working directory.
+
+git rm --cached stage_me.txt
+
+-Add stage_me.txt file to the staging area.
+
+git add stage_me.txt
+
+-Remove stage_me.txt from the staging area and the working directory.
+
+git rest --hard COMMIT_SHA
+
+-Create a new file called commit_me.txt.
+
+touch commit_me.txt
+
+-Add commit_me.txt to the staging area.
+
+git add commit_me.txt
+
+-Commit with the message "adding commit_me.txt".
+
+git commit -m "adding commit_me.txt"
+
+-Create another file called second.txt.
+
+touch second.txt
+
+-Add second.txt to the staging area.
+
+git add second.txt
+
+-Commit with the message "adding second.txt".
+
+git commit -m "adding second.txt"
+
+-Check out your previous commits using git log --oneline to see the unique identifier or SHA for each of your commits.
+
+git log --oneline
+
+-Using git reset, undo the previous commit and move your changes back to the working directory.
+
+git reset --mixed COMMIT_SHA
+
+-Add second.txt again.
+
+git add second.txt
+
+-Commit with the message "Trying to commit again".
+
+git commit -m "Trying to commit again"
+
+-Using git reset undo the previous commit and move your changes back to the staging area.
+
+git reset --soft COMMIT_SHA
+
+-Commit with the message "Trying to commit again and again".
+
+git commit -m "Trying to commit again and again"
+
+-Using git reset undo the previous commit so that any changes are not part of the working directory.
+
+git reset --hard COMMIT_SHA
 
 _____
 
-Create a folder called branch_time.
-cd into that folder.
-Initialize an empty git repository.
-Create a file called first.txt, then add and commit the file.
-Create a new branch called amazing_feature.
-Create a file called best.txt.
-Add the file.
-Commit the file with the message -m "added best.txt".
-Switch back to the master branch.
-Merge your changes from the feature branch into master.
-Delete the feature branch.
+{ Branching. }
+
+-Create a folder called branch_time.
+
+mkdir branch_time
+
+-cd into that folder.
+
+cd branch_time
+
+-Initialize an empty git repository.
+
+git init
+
+-Create a file called first.txt, then add and commit the file.
+
+touch first.txt
+git add first.txt
+git commit -m "added first.txt"
+
+-Create a new branch called amazing_feature.
+
+git checkout -b amazing_feature
+
+-Create a file called best.txt.
+
+touch best.txt
+
+-Add the file.
+
+git add best.txt
+
+-Commit the file with the message -m "added best.txt".
+
+git commit -m "added best.txt"
+
+-Switch back to the master branch.
+
+git checkout master
+
+-Merge your changes from the feature branch into master.
+
+git merge amazing_feature
+
+-Delete the feature branch.
+
+git branch -D amazing_feature
 
 _____
 
