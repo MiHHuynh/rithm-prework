@@ -151,7 +151,7 @@ Answer the following questions:
 
 What does git clean do?
 
-Git clean removes untracked files.
+Git clean removes untracked or unmerged files.
 
 What do the -d and -f flags for git clean do?
 
