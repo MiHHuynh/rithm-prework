@@ -1,0 +1,30 @@
+{ GitHub Exercises. }
+
+
+Part I
+Let's start by taking a bit of time to practice the git workflow below. It is so valuable to just practice this workflow a couple times, since you will most likely doing it professionally as well as in your individual projects and open source contributions. Here are some things to do.
+
+-Create a local repository and add and commit some files
+
+mkdir test_repo
+touch test.txt
+echo hello > test.txt
+mv test.txt test_repo
+cd test_repo
+git init
+git add .
+git commit -m "first commit"
+
+-Create a remote repository and push your code from the local repo to the remote
+
+git push origin master
+
+-Fork the repo https://github.com/rithmschool/git_practice - clone it and submit a pull request
+
+
+-Create a new branch locally and push it to GitHub
+
+git checkout -b another_branch
+
+-Submit a pull request with your new branch against the master branch on the git_practice repo.
+
