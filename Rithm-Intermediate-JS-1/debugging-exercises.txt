@@ -1,0 +1,121 @@
+{ Debugging Exercises. }
+
+Answer the following questions:
+
+-What does the throw keyword do?
+
+The throw keyword throws an error.
+
+-What does the finally keyword do?
+
+The finally keyword always runs a chunk of code after every try block.
+
+-What is the difference between a TypeError and ReferenceError?
+
+A TypeError is an incorrect use of type, for example, calling a number variable as if it were a function. A ReferenceError occurs when you try to access a variable that is out of scope or that is not defined.
+
+-How do you create a snippet in the Chrome dev tools?
+
+option+command+J > sources tab > snippets
+
+-In the Chrome dev tools, on the right hand side of the sources tab, there is a "pause" button which allows you to "pause on caught exceptions." What is an exception?
+
+An exception is an error you define or customize.
+
+-How do we "catch" errors in JavaScript? Give an example with code for what that might look like.
+
+try {
+    undefined();
+} catch(e) {
+    console.log(e);
+}
+
+_____
+
+Explain what type of error will be thrown, why the error is occuring, and how to fix it:
+
+1. person;
+
+ReferenceError will be thrown because the variable has not been declared nor defined.
+In order to fix it, we must declare it before calling it.
+
+2.
+var data = {};
+data.displayInfo();
+
+TypeError will be thrown because data does not have any methods; thus displayInfo cannot be called like a function because it does not exist.
+To fix this, we need to define displayInfo and make it a valid function.
+
+3.
+var data = {};
+data.displayInfo.foo = "bar";
+
+TypeError will be thrown. Because displayInfo is not defined, its value is currently undefined, and then we are trying to set a property to
+undefined. This will not work. To fix this, we need to define displayInfo and give it a property of foo.
+
+4.
+function data(){
+    var thing = "foo";
+}
+data();
+thing;
+
+ReferenceError will be thrown because the variable thing is being called outside of its scope. To fix this, declare it outside of the function.
+
+_____
+
+Part II
+
+Fix the broken code and explain what was wrong:
+
+1.
+for(var i=0; i > 5; i++){
+    console.log(i);
+}
+
+The condition is set to be i > 5, which will always evaluate to false. Because i starts at 0, the condition is not met on the first iteration
+of the for loop, making for loop end and the console.log never run. You can change the condition to i < 5 instead to print 0 through 4.
+
+2.
+function addIfEven(num){
+    if(num % 2 = 0){
+        return num + 5;
+    }
+    return num;
+}
+
+Assignment instead of comparison is occuring in the if condition. To fix this, use == or === instead.
+
+3.
+function loopToFive(){
+    for(var i=0, i < 5, i++){
+        console.log(i);
+    }
+}
+
+Commas instead of semicolons are being used to separate the parts of the for loop.
+
+4.
+function displayEvenNumbers(){
+    var numbers = [1,2,3,4,5,6,7,8];
+    var evenNumbers = [];
+    for(var i=0; i<numbers.length-1; i++;){
+        if(numbers % 2 = 0); {
+            evenNumbers.push(i);
+        }
+        return evenNumbers;
+    }
+}
+displayEvenNumbers(); // should return [2,4,6,8] 
+
+// HINT - eight things need to be changed here for this to work!
+// Start by fixing the syntax errors and then run the function to see what your output is.
+
+i<numbers.length-1 should be i<numbers.length or else it would not run into the last item in the numbers array.
+i++; should be i++. There is an extra semicolon.
+numbers % 2 should be numbers[i] % 2. numbers by itself is the entire array, not a single value.
+numbers % 2 = 0 should be numbers[i] % 2 === 0. The former is assignment, which is also invalid. A comparator should be used for conditions.
+(numbers % 2 = 0); has an extra semicolon after the condition. This should not be there.
+evenNumbers.push(i); should be evenNumbers.push(numbers[i]); to actually push a value from numbers into evenNumbers.
+The return statement is inside the for loop, making the function return on the first iteration. It should be after the for loop.
+
