@@ -16,3 +16,5 @@ Things can get a little hairy when it comes to larger projects that require mult
 
 Stay tuned...
 
+<sup>Fun fact: From writing this README.md, I learned that markdown is similar (identical?) to Reddit formatting.</sup>
+
