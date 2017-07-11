@@ -118,4 +118,3 @@ numbers % 2 = 0 should be numbers[i] % 2 === 0. The former is assignment, which 
 (numbers % 2 = 0); has an extra semicolon after the condition. This should not be there.
 evenNumbers.push(i); should be evenNumbers.push(numbers[i]); to actually push a value from numbers into evenNumbers.
 The return statement is inside the for loop, making the function return on the first iteration. It should be after the for loop.
-
