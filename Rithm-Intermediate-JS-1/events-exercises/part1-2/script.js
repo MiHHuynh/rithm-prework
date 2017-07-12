@@ -43,6 +43,12 @@ document.addEventListener("DOMContentLoaded", function(event){
 		clearTimeout(car2timer);
 		car1.style.marginLeft = 0;
 		car2.style.marginLeft = 0;
+		/*
+			solution given suggests putting a button.disabled
+			toggle here and in the eventListener, but I left it out
+			because it looks interesting when you click the button
+			multiple times.
+		*/
     }
 
 	button.addEventListener("click", function(event){
