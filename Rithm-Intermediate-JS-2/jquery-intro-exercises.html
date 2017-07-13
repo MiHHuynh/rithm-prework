@@ -1,0 +1,73 @@
+<!-- Exercises
+Answer the following questions:
+
+What is jQuery? What does it enable you to do?
+
+jQuery is a library that makes selecting DOM elements much more concise across multiple browsers.
+
+What is the difference between a jQuery object and HTML Element?
+
+A jQuery object is an array-like object that jQuery statements return. It has access to all of the methods that
+jQuery offers. A regular HTML element does not have access to jQuery methods, and regular javascript can only
+handle HTML elements (and not jQuery objects).
+
+What does the $ represent in jQuery?
+
+The $ is an alias for jQuery.
+
+Given the following HTML: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercise</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="welcome"></h1>
+        <div class="list-container">
+            <ul class="nav">
+                <li class="nav-item">Home</li>
+                <li class="nav-item">About Us</li>
+                <li class="nav-item">Contact</li>
+                <li class="nav-item">Careers</li>
+                <li class="nav-item">Apply</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-nav">
+                <li class="footer-nav-item">Learn More</li>
+                <li class="footer-nav-item">Blog</li>
+                <li class="footer-nav-item">Email Us</li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+
+    // Write the jQuery selectors/code to do the following
+
+    // Write the necessary to code wait for the DOM to load in jQuery.
+    $("document").ready(function(){
+    // Select the footer element.
+        $("footer");
+
+    // Select the div with an id of "container".
+        $("#container");
+    // Select all of the lis inside of the ul with a class of nav.
+        $(".nav > li");
+
+    // Select the third li inside of the div with a class of list-container.
+        $(".list-container li:nth-child(3)");
+
+    // Select only the last li in each of the uls.
+
+        $("ul li:last-child");
+        
+    });
+
+    </script>
+</body>
+</html>
