@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function(event){
 		for (var i = 0; i < finishedItems.length; i++) {
 			var doneDiv = document.createElement("div");
 			doneDiv.innerText = finishedItems[i];
-			document.getElementById("completed-items").appendChild(doneDiv);
+			doneDiv.setAttribute("class", "done");
+			doneDiv.style.textDecoration = "line-through";
+			document.getElementById("body").appendChild(doneDiv);
 		}
 	} else {
 		finishedItems = [];
@@ -53,6 +55,8 @@ document.addEventListener("DOMContentLoaded", function(event){
 	document.querySelector("body").addEventListener("click", function(event){
 		if (event.target.classList.contains("incomplete-item")) {
 			event.target.style.textDecoration = "line-through";
+			finishedItems.push(event.target.innerText);
+			console.log(event.target.innerText);
 		} else if (event.target.classList.contains("deleteButton")) {
 			event.target.previousSibling.remove();
 			event.target.remove();
@@ -61,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 // need to update incomplete or complete lists, repopulate with proper formatting
 // e.g. line through or not
+// probably change the data structure of the items to a single array of objects
 
 });
 
