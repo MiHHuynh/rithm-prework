@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function(event){
 			itemDiv.innerText = incompleteItems[i];
 			document.getElementById("to-do-list").appendChild(itemDiv);
 		}
+	} else {
+		incompleteItems = [];
 	}
 
 	// retrieve and populate completed items
@@ -19,10 +21,12 @@ document.addEventListener("DOMContentLoaded", function(event){
 			doneDiv.innerText = finishedItems[i];
 			document.getElementById("completed-items").appendChild(doneDiv);
 		}
+	} else {
+		finishedItems = [];
 	}
 
 	var addButton = document.getElementById("add-item");
-	addButton.addEventListener("click", function() {
+	addButton.addEventListener("click", function(event) {
 		// add item to HTML list
 		var item = document.getElementById("item").value;
 		var toDoItem = document.createElement("div");
@@ -32,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 		
 		// give item a delete button
 		var deleteButton = document.createElement("button");
+		deleteButton.setAttribute("class", "deleteButton");
 		deleteButton.innerText = "Done?";
 		toDoItem.appendChild(deleteButton);
 
@@ -42,12 +47,20 @@ document.addEventListener("DOMContentLoaded", function(event){
 		incompleteItems.push(item);
 		localStorage.setItem("incompleteItems", JSON.stringify(incompleteItems));
 
-
-		//document.querySelectorAll(".incomplete-item").appendChild(deleteButton);
-
-
 	});
 
+	// strike-through list items when clicked, or remove completely if remove button is clicked
+	document.querySelector("body").addEventListener("click", function(event){
+		if (event.target.classList.contains("incomplete-item")) {
+			event.target.style.textDecoration = "line-through";
+		} else if (event.target.classList.contains("deleteButton")) {
+			event.target.previousSibling.remove();
+			event.target.remove();
+		}
+	});
+
+// need to update incomplete or complete lists, repopulate with proper formatting
+// e.g. line through or not
 
 });
 
