@@ -1,0 +1,23 @@
+How The Web Works Exercise
+Answer the following questions. Write out your answers in atext or markdown file.
+
+What is HTTP?
+What is a URL?
+What is TCP?
+What is IP?
+What is DNS?
+What is idempotent?
+What is a query string?
+What is a path or route?
+List four HTTP Verbs and their use cases.
+What is a client?
+What is a server?
+What is an HTTP request?
+What is an HTTP response?
+What is an HTTP header? Give a couple examples of request and response headers you have seen.
+What is REST?
+What is JSON?
+What happens when you type in "Hello World" in google.com and press enter?
+What does it mean when we say the web is "stateless"?
+What is curl?
+Make a GET request to http://omdbapi.com?t=titanic using curl (your answer should be the curl command required).
