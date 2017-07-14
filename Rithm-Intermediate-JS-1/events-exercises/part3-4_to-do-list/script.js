@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 	// strike-through list items when clicked, or remove completely if remove button is clicked
 	document.querySelector("body").addEventListener("click", function(event){
-		if (event.target.classList.contains("incomplete-item")) {
+		if (event.target.classList.contains("incomplete-item" || event.target.toLowerCase() === "div")) {
 			event.target.style.textDecoration = "line-through";
 			finishedItems.push(event.target.innerText);
 			console.log(event.target.innerText);

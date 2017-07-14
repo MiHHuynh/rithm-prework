@@ -1,0 +1,35 @@
+body {
+	font-family: "Arial", Sans-Serif;
+}
+
+#nav {
+	float: left;
+	width: 15%;
+	height: 100%;
+	margin-left: 5%;
+	padding: 2em;
+	background-color: #96C1F1;
+}
+
+#content {
+	background-color: #4B6CBA;
+	width: 40%;
+	float: left;
+	padding: 2em;
+}
+
+#content ul {
+	text-align: center;
+	list-style-type: none;
+}
+
+#wrap {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+body {
+	background-color: #363C87;
+}
