@@ -1,0 +1,36 @@
+.left-box {
+	background-color: pink;
+	width: 30%;
+	height: 10em;
+}
+
+.right-box {
+	background-color: blue;
+	width: 60%;
+	height: 10em;
+
+	margin-left: 2em;
+}
+
+.left-box, .right-box {
+	margin-bottom: 2em;
+}
+
+.bottom-box {
+	background-color: yellow;
+	width: 95%;
+	height: 10em;
+
+}
+
+.left-box, .right-box, .bottom-box {
+	border: 1px solid black;
+	float: left;
+}
+
+#wrapper {
+	overflow: auto;
+	border: 1px solid black;
+	width: 80%;
+	margin: auto auto;
+}
