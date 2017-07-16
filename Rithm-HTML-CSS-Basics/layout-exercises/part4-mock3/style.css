@@ -1,0 +1,32 @@
+.container {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full-column {
+	background-color: green;
+	height: 5em;
+	width: 98%;
+}
+
+.third-column {
+	margin-top: 2%;
+	margin-right: 2%;
+	height: 15em;
+	width: 31%;
+	display: inline-block;
+}
+
+.third-column:nth-child(1) {
+	background-color: orange;
+}
+
+.third-column:nth-child(2) {
+	background-color: pink;
+}
+
+.third-column:nth-child(3) {
+	background-color: blue;
+	margin-right: 0;
+}
