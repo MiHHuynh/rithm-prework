@@ -1,0 +1,36 @@
+body {
+	/*width: 70%;*/
+}
+
+.top-box {
+	background-color: purple;
+	margin-right: auto;
+	margin-left: auto;
+	width: 97%;
+	height: 10em;
+	border: 1px solid black;
+}
+
+.col {
+	width: 31.5%;
+	margin: 1em 0.5em;
+	height: 30em;
+	display: inline-block;
+}
+
+.row-of-columns {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.col:first-child {
+	background-color: red;
+}
+
+.col:nth-child(2) {
+	background-color: green;
+}
+
+.col:nth-child(3) {
+	background-color: orange;
+}
