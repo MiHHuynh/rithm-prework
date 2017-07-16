@@ -1,0 +1,31 @@
+.first-row, .second-row, .third-row {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.left-box, .right-box, .bottom-box {
+	border: 1px solid black;
+	height: 10em;
+}
+
+.left-box {
+	background-color: pink;
+	width: 30%;
+}
+
+.right-box {
+	background-color: blue;
+	width: 65%;
+}
+
+.bottom-box {
+	background-color: yellow;
+	width: 97%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* FLEXBOX IS HARD */
