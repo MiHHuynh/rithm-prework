@@ -2,21 +2,72 @@
 Answer the following questions
 
 What is an em?
+
+An em is a unit that is equivalent to the default font-size for the element.
+
 What is the difference between em and rem?
+
+While the em will change depending on what the default font-size for the element is,
+rem is a unit that is only relative to the root element (i.e. html), which makes it
+the same size anywhere in the page.
+
 What is "mobile first" design?
+
+"Mobile first" design is design that is implemented to fit mobile screens first.
+Back in the day, people used to design for laptops and larger screens, but that would
+almost never translate to a decent design on mobile. Nowadays, most people are viewing
+things on their phones, so going by "mobile first," one can ensure that the app or site
+is usable and viewable on mobile before adapting it to web/laptops.
+
 What is BEM?
-Part II
 
-For this exercise you will be building a small grid system! Your task is to create the following classes:
+BEM stands for Block, Element, and Modifier. It is a way of organizing
+CSS to make it more maintainable. It aims to avoid inheritance and provide
+some sort of scope to the CSS and to reduce style conflicts by minimizing
+specificity.
 
-.col-4 - consumes 33% of the width when the screen size is
-greater than 960 pixels, 50% of the width when the screen
-size is greater than 765 pixels and 100% of the width when
-the screen size is less than 765 pixels.
+Part II */
 
-.col-6 - consumes 50% of the width when the screen size is
-greater than 960 pixels and 100% of the width when the
-screen size is less than 960 pixels
+.col-4 {
+	width: 33%;
+	height: 10rem;
+	background-color: orange;
+}
 
-.col-12 - consumes 100% of the width when the screen size
-at all sizes.*/
+.col-6 {
+	width: 50%;
+	height: 10rem;
+	background-color: red;
+}
+
+.col-12 {
+	/*consumes 100% of the width when the screen size at all sizes*/
+	width: 100%;
+	height: 10rem;
+	background-color: yellow;
+}
+
+@media (min-width: 765px) and (max-width: 960px) {
+	/*50% of the width when the screen size is greater than 765 pixels*/
+	.col-4 {
+		width: 100%;
+	}
+}
+
+@media (max-width: 765px) {
+	/*100% of the width when the screen size is less than 765 pixels*/
+	.col-4 {
+		width: 100%;
+	}
+}
+
+@media (max-width: 960px) {
+	/*100% of the width when the screen size is less than 960 pixels*/
+	.col-6 {
+		width: 100%;
+	}
+}
+
+
+
+
