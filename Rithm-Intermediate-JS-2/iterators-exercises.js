@@ -256,7 +256,6 @@ function getDurations(arrSongs) {
 	});
 }
 
-
 // Write a function called getDurationInSeconds which takes in an array of songs and returns an array of each
 // song's duration in seconds.
 
@@ -274,41 +273,67 @@ function getDurationInSeconds(arrSongs) {
 // they should be ignored (so only the artist to the left of "featuring" is kept.)
 
 function getMainArtists(arrSongs) {
-	// map
+	arrSongs.map(function(song){
+		artist = song.artist;
+		featuringIndex = artist.search(" featuring");
+		if (featuringIndex > 0) {
+			return artist.substring(0, featuringIndex);
+		} else {
+			return artist;
+		}
+	});
 }
 
 // Write a function called getBigHits which takes an array of songs and returns an array of songs which were number one
 // for 10 or more weeks.
 
 function getBigHits(arrSongs) {
-	// filter
+	return arrSongs.filter(function(song){
+		return song.weeksAtNumberOne >= 10;
+	});
 }
 
-// Write a function called getShortSongs which takes an array of songs and returns an array of songs which shorter
+// Write a function called getShortSongs which takes an array of songs and returns an array of songs which are shorter
 // than 3 minutes.
 
 function getShortSongs(arrSongs) {
-	// filter
+	return arrSongs.filter(function(song){
+		return parseInt(song.duration, 10) < 3;
+	});
 }
 
 // Write a function called getSongsByArtist which takes in an array of artists and the name of an artist and returns
 // an array of songs by that artist.
 
-function getSongsByArtist(arrSongs) {
-	// filter
+function getSongsByArtist(arrSongs, nameOfArtist) {
+	return arrSongs.filter(function(song){
+		return song.artist === nameOfArtist;
+	});
 }
 
 // Write a function called getOneHitWonders which takes in an array of songs and returns an array of songs for artists
 // who only appear once in the original array.
 
 function getOneHitWonders(arrSongs) {
-	// filter
+	var countByArtistObj = getSongCountByArtist(arrSongs);
+
+	return arrSongs.filter(function(song, index){
+		if (countByArtistObj[song.artist] === 1) {
+			return song;
+		}
+	});
 }
 
 // Refactor summerJamCount to use reduce!
 
 function summerJamCount(arrSongs) {
-	// reduce
+	var summerMonths = [6, 7, 8];
+	return arrSongs.reduce(function(acc, song){
+		if (summerMonths.includes(song.month)) {
+			acc++;
+		}
+		return acc;
+	}, 0);
 }
 
 // Write a function called getTotalDurationInSeconds which takes in an array of songs and returns the total amount of
@@ -316,19 +341,33 @@ function summerJamCount(arrSongs) {
 // to help solve this problem?)
 
 function getTotalDurationInSeconds(arrSongs) {
-	// reduce
+	var arrayOfSeconds = getDurationInSeconds(arrSongs);
+	return arrayOfSeconds.reduce(function(acc, val){
+		return acc + val;
+	});
 }
 
 // Write a function called getSongCountByArtist which takes in an array of songs and returns an object. The keys in the
 // object should be artist names, and the values should be the number of songs by that artist in the orignal array.
 
 function getSongCountByArtist(arrSongs) {
-	// reduce
+	return arrSongs.reduce(function(countByArtist, song){
+		if (song.artist in countByArtist) {
+			countByArtist[song.artist]++;
+		} else {
+			countByArtist[song.artist] = 1;
+		}
+		return countByArtist;
+	}, {});
 }
 
 // Write a function called averageWeeksAtNumberOne which takes in an array of songs and returns the average number of
 // weeks that songs on the list were #1.
 
 function averageWeeksAtNumberOne(arrSongs) {
-	// reduce
+	var sum = arrSongs.reduce(function(acc, song){
+		return acc + song.weeksAtNumberOne;
+	}, 0);
+	var avg = sum/arrSongs.length;
+	return avg;
 }
