@@ -3,14 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>To-Do List</title>
+	<style>
+		.container {
+			margin-top: 100px;
+			border: 1px solid black;
+			padding: 15px 30px;
+			width: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.deleteButton {
+			margin-left: 5px;
+		}
+	</style>
 </head>
 <body>
-	<form action="#">
-		<input type="text" name="item" id="item">
-		<button id="add-item">Add to to-do list!</button>
-	</form>
-	<section id="to-do-list">
-	</section>
+	<div class="container">
+		<h4>To-Do List</h4>
+		<form action="#">
+			<input type="text" name="item" id="item">
+			<input id="add-item" type="submit" value="ADD ITEM">
+		</form>
+		<ul id="to-do-list">
+		</ul>
+	</div>
 </body>
 <script src="script.js"></script>
 </html>
