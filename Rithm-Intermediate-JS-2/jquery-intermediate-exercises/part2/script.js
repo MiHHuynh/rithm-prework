@@ -15,6 +15,7 @@ $(document).ready(function(){
 	$("table").on("click", $deleteRowButton, function(event){
 		$(event.target).parent().prevAll().parent().remove();
 	});
+	// why does ^ work but not $(".delete-row").on("click", function(){}); ?
 });
 
 function resetFields() {
