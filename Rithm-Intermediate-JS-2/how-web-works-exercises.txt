@@ -1,23 +1,82 @@
 How The Web Works Exercise
-Answer the following questions. Write out your answers in atext or markdown file.
+Answer the following questions. Write out your answers in a text or markdown file.
 
 What is HTTP?
+
+HTTP is a client-server protocol that defines how the client gets or sets data from the server.
+
 What is a URL?
+
+A URL, or Uniform Resource Locator, is an address you type into the browser which states the protocol and domain name of a website.
+
 What is TCP?
+
+TCP is another type of protocol.
+
 What is IP?
+
+IP stands for Internet Protocol, which is the protocol that governs how data is sent across the network from one computer to another.
+
 What is DNS?
+
+DNS, or Domain Name System, is a server that stores all domain names and their corresponding IP addresses. It takes domain names as input and returns the IP address.
+
 What is idempotent?
+
+An operation is considered idempotent when it can be executed a number of times on a set of data and the result does not change.
+
 What is a query string?
+
+A query string is a list of parameters that you can pass to a server in the URL.
+
 What is a path or route?
+
+
+
 List four HTTP Verbs and their use cases.
+
+
+
 What is a client?
+
+
+
 What is a server?
+
+
+
 What is an HTTP request?
+
+
+
 What is an HTTP response?
+
+
+
 What is an HTTP header? Give a couple examples of request and response headers you have seen.
+
+
+
 What is REST?
+
+
+
 What is JSON?
+
+
+
 What happens when you type in "Hello World" in google.com and press enter?
+
+
+
 What does it mean when we say the web is "stateless"?
+
+
+
 What is curl?
+
+
+
 Make a GET request to http://omdbapi.com?t=titanic using curl (your answer should be the curl command required).
+
+
