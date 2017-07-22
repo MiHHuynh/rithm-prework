@@ -11,7 +11,7 @@ A URL, or Uniform Resource Locator, is an address you type into the browser whic
 
 What is TCP?
 
-TCP is another type of protocol.
+TCP (Transmission Control Protocol) is another type of protocol that defines how hosts connect to each other and transfer data.
 
 What is IP?
 
@@ -27,56 +27,59 @@ An operation is considered idempotent when it can be executed a number of times 
 
 What is a query string?
 
-A query string is a list of parameters that you can pass to a server in the URL.
+A query string is a list of key-value parameters that you can pass to a server in the URL.
 
 What is a path or route?
 
-
+A path or route is the trail to an actual resource that a server has on its hard drive or an abstract resource that the serve is able to create, read, update, or delete.
 
 List four HTTP Verbs and their use cases.
 
-
+GET get data from the server. When a webpage loads after you go to it via the URL, the browser has made a GET to grab all the content.
+POST creates or modifies data in the server. Submitting a form makes a POST to the server.
+PUT is commonly used for modifying data that is already on the server. Editing information you've already submitted can use a PUT.
+DELETE deletes data from the server. Removing hosted content uses a DELETE.
 
 What is a client?
 
-
+A client requests data or a service from a server.
 
 What is a server?
 
-
+A server provides service to the service requestor (client).
 
 What is an HTTP request?
 
-
+An HTTP request is a request from a client sent to a web server using HTTP (Hypertext Transfer Protocol).
 
 What is an HTTP response?
 
-
+An HTTP response is a response from the server to the client using HTTP.
 
 What is an HTTP header? Give a couple examples of request and response headers you have seen.
 
-
+HTTP headers carry extra meta information about the HTTP response. Some request headers are accept-encoding, accept-language, upgrade-insecure-requests, user-agent, authority. Some response headers are content-type, transfer-encoding, connection, set-cookie, cache-control.
 
 What is REST?
 
-
+REST stands for REpresentational State Transfer. It is a popular framework for building web services.
 
 What is JSON?
 
-
+JSON, or Javascript Object Notation, provides a way to format data that is transferred between client and server. It can easily translate data from the server into readable javascript.
 
 What happens when you type in "Hello World" in google.com and press enter?
 
-
+First, the browser uses DNS (domain name server) to convert the URL into an IP address. Once the browser has the IP address, it makes an HTTP GET request to the server. The server receives the request, generates the appropriate HTTP, and returns an HTTP response to send back to the browser along with a status code (whether or not it succeeded). The body of the HTTP response is the html that needs to be rendered on the browser. The browser receives the response and generates the document object model.
 
 What does it mean when we say the web is "stateless"?
 
-
+When we say the web is stateless, we mean that it does not retain or store any information about past request-response pairs when doing subsequent ones. The server handles each request uniquely.
 
 What is curl?
 
-
+curl makes a basic HTTP request through the command-line.
 
 Make a GET request to http://omdbapi.com?t=titanic using curl (your answer should be the curl command required).
 
-
+curl http://omdbapi.com?t=titanic
