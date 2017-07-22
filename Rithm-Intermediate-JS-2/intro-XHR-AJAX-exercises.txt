@@ -2,8 +2,43 @@ Exercises
 Answer the following questions:
 
 Where else have you seen 'asynchronous' code before? Think back to a certain section in Part I of the Intermediate JavaScript course.
+
+Asynchronous code occurs in setInterval and setTimeout.
+
 What is XHR?
+
+XHR, or XMLHttpRequest, is an API that allows for transferring data between client and server, but it specifically is only available to scripting languages in the browser (like Javascript). It allows receiving of data without having to refresh the web page.
+
 What is XML? Why do we prefer to use JSON?
+
+XML stands for Extensible Markup Language. It resembles HTML but it is primarily used to store data.
+
+From https://www.sitepoint.com/json-vs-xml/:
+JSON requires less tags than XML – XML items must be wrapped in open and close tags whereas JSON you just name the tag once
+Because JSON is transportation-independent, you can just bypass the XMLHttpRequest object for getting your data.
+JavaScript is not just data – you can also put methods and other things in JSON format.
+JSON is better at helping procedural decisions in your JavaScript based on objects and their values (or methods).
+You can get JSON data from anywhere, not just your own domain. There’s no more proxy server nonsense.
+
 What is AJAX?
+
+AJAX, or Asynchronous Javascript And XML, is the use of the XMLHttpRequest object to send and receive data in various formats (JSON, XML, HTML, pure text files) with servers.
+
 Using the XHR object, make a request to https://omdbapi.com and choose a title to search by using the query string and key of t.
+
+var XHR = new XMLHttpRequest();
+XHR.onreadystatechange = function() {
+	if (XHR.readyState == 4 && XHR.status == 200) {
+		console.log(JSON.parse(XHR.responseText));
+	}
+};
+XHR.open("GET", "https://omdbapi.com?t=shaolinsoccer");
+XHR.send();
+
 Using the fetch API, make a request to https://omdbapi.com and choose a title to search by using the query string and key of t.
+
+fetch('https://omdbapi.com?t=shaolinsoccer').then(function(response){
+    return response.json().then(function(data){
+        console.log(data);
+    });
+});
