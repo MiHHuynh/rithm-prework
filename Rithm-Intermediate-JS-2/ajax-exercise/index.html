@@ -1,9 +1,5 @@
 <!-- { AJAX Exercises. }
 
-It's time to build something fun with your knowledge of jQuery and AJAX! For this exercise we will be using the Giphy API! This will require you to use an API key and understand some of the documentation about the API, which you can see here.
-
-Here is what the URL would look like for search term of "hilarious" - http://api.giphy.com/v1/gifs/search?q=hilarious&api_key=dc6zaTOxFJmzC. You can click on this URL and see the JSON you will get back. To view this in a nicer format, we highly recommend using the JSON Viewer chrome extension.
-
 Your application should do the following:
 
 Allow the user to search for a GIF and when the form is submitted, make an AJAX request to the Giphy API and return a single GIF
@@ -16,8 +12,34 @@ Allow the user to remove all of the GIFs by clicking a button -->
 <head>
 	<meta charset="UTF-8">
 	<title>Giphy Search Engine</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		body {
+			background-color: #000000;
+		}
+		
+		h1 {
+			color: #ffffff;
+			margin-bottom: 1em;
+		}
+
+		.container {
+			text-align: center;
+		}
+	</style>
 </head>
 <body>
+	<div class="container">
+		<h1>GIPHY SEARCH</h1>
+		<form action="#" class="form-inline">
+			<input type="text" class="form-control search-input">
+			<button class="search-gifs btn">Search Giphy!</button>
+			<button class="clear-gifs btn btn-warning">Remove Images</button>
+		</form>
+		<div class="gif-bucket"></div>
+	</div>
 	
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
 </html>
