@@ -1,12 +1,15 @@
-/*
-Prompt for word
-var word = [...]
+function initializeGame() {
 
+}
 
+var board = [[],[],[]];
 
-*/
+var player1;
+var player2;
 
-
+document.addEventListener("DOMContentLoaded", function(event){
+	console.log('hello');
+});
 
 
 /*
