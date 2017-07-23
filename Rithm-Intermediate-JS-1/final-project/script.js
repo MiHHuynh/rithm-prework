@@ -9,6 +9,17 @@ var player2;
 
 document.addEventListener("DOMContentLoaded", function(event){
 	console.log('hello');
+
+	// show instructions when mouseover the ? in corner
+	var about = document.querySelector(".about");
+	var instructions = document.querySelector("ol");
+	about.addEventListener("click", function(event){
+		if (instructions.style.display === "none") {
+			instructions.style.display = "block";
+		} else {
+			instructions.style.display = "none";
+		}
+	});
 });
 
 

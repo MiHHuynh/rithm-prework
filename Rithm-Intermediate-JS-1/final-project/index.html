@@ -15,84 +15,17 @@ tic tac toe
 <head>
 	<meta charset="UTF-8">
 	<title>Final Project - Tic Tac Toe</title>
-	<style>
-		body {
-		}
-		.board {
-			margin-left: auto;
-			margin-right: auto;
-			display: flex;
-			display: -webkit-flex;
-			flex-wrap: wrap;
-			width: 50%;
-			height: 70vh;
-		}
-		.board > * {
-			box-sizing: border-box;
-			width: 33.33%;
-		}
-
-		.square-1, .square-2, .square-4, .square-5,
-		.square-7, .square-8 {
-			border-right: 4px solid black;
-		}
-
-		.square-1, .square-2, .square-3, .square-4,
-		.square-5, .square-6 {
-			border-bottom: 4px solid black;
-		}
-
-		.square-2, .square-3, .square-5, .square-6,
-		.square-8, .square-9 {
-			border-left: 4px solid black;
-		}
-
-		.square-4, .square-5, .square-6, .square-7, .square-8, .square-9 {
-			border-top: 4px solid black;
-		}
-		
-/*		.square-1 {
-			border-right: 1px solid black;
-			border-bottom: 1px solid black;
-		}
-		.square-2 {
-			border-left: 1px solid black;
-			border-right: 1px solid black;
-			border-bottom: 1px solid black;
-		}
-		.square-3 {
-			border-left: 1px solid black;
-			border-bottom: 1px solid black;
-		}
-		.square-4 {
-			border-top: 1px solid black;
-			border-right: 1px solid black;
-			border-bottom: 1px solid black;
-		}
-		.square-5 {
-			border: 1px solid black;
-		}
-		.square-6 {
-			border-top: 1px solid black;
-			border-left: 1px solid black;
-			border-bottom: 1px solid black;
-		}
-		.square-7 {
-			border-top: 1px solid black;
-			border-right: 1px solid black;
-		}
-		.square-8 {
-			border-top: 1px solid black;
-			border-right: 1px solid black;
-			border-left: 1px solid black;
-		}
-		.square-9 {
-			border-top: 1px solid black;
-			border-left: 1px solid black;		
-		}*/
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<div class="about"><span>?</span></div>
+	<ol class="instructions">
+		<li>Grab a friend to play!</li>
+		<li>Each person plays with either X or O.</li>
+		<li>Take turns filling in squares with your designated symbol.</li>
+		<li>The first person to get 3 in a row wins!</li>
+	</ol>
+	<h1>TIC TAC TOE</h1>
 	<div class="board">	
 		<div class="square-1"></div>
 		<div class="square-2"></div>
