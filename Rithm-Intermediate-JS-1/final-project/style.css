@@ -26,6 +26,9 @@ ol {
 	border-radius: 5%;
 	padding: 2em;
 	width: 10em;
+	position: fixed;
+	top: 2.5em;
+	right: 2.5em;
 }
 .about {
 	top: 1em;
@@ -42,6 +45,13 @@ ol {
 	color: #F0F66E;
 }
 
+.square {
+	display: flex;
+	justify-content: center;
+	font-size: 5em;
+	overflow: visible;
+}
+
 span {
 	justify-content: space-around;
 	align-content: space-around;
@@ -54,22 +64,23 @@ span {
 	width: 33.33%;
 }
 
-.square-1, .square-2, .square-4, .square-5,
-.square-7, .square-8 {
+.square-0, .square-1, .square-3, .square-4,
+.square-6, .square-7 {
 	border-right: 4px solid #F0F66E;
 }
 
-.square-1, .square-2, .square-3, .square-4,
-.square-5, .square-6 {
+.square-0, .square-1, .square-2, .square-3,
+.square-4, .square-5 {
 	border-bottom: 4px solid #F0F66E;
 }
 
-.square-2, .square-3, .square-5, .square-6,
-.square-8, .square-9 {
+.square-1, .square-2, .square-4, .square-5,
+.square-7, .square-8 {
 	border-left: 4px solid #F0F66E;
 }
 
-.square-4, .square-5, .square-6, .square-7, .square-8, .square-9 {
+.square-3, .square-4, .square-5, .square-6,
+.square-7, .square-8 {
 	border-top: 4px solid #F0F66E;
 }
 
