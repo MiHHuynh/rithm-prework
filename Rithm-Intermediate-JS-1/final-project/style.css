@@ -11,15 +11,20 @@ body {
 	width: 45%;
 	height: 75vh;
 }
-h1 {
+h1, p {
 	text-align: center;
-	font-size: 4em;
 	margin-right: auto;
 	margin-left: auto;
 }
-h1, ol {
+h1, ol, p {
 	color: #F0F8EA;
 }
+
+h1 {
+	font-size: 4em;
+	margin-bottom: 0;
+}
+
 ol {
 	display: none;
 	background-color: #91C653;

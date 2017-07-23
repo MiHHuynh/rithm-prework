@@ -13,6 +13,15 @@ function initializeGame() {
 		XorO: "O",
 		currentlyPlaying: false
 	};
+
+	var squareDivs = document.querySelectorAll(".square");
+
+	for(var i = 0; i < squareDivs.length; i++){
+	    squareDivs[i].innerText = "";
+	}
+
+	document.querySelector(".current-player").innerText = "Current Player: " + player1.XorO;
+
 }
 
 function isWinningState() {
@@ -45,7 +54,7 @@ function isWinningState() {
 
 document.addEventListener("DOMContentLoaded", function(event){
 	initializeGame();
-
+	document.querySelector(".current-player").innerText = "Current Player: " + player1.XorO;
 	// show instructions when mouseover the ? in corner
 	var about = document.querySelector(".about");
 	var instructions = document.querySelector("ol");
@@ -70,9 +79,11 @@ document.addEventListener("DOMContentLoaded", function(event){
 			if (player1.currentlyPlaying === true) {
 				event.target.innerText = player1.XorO;
 				boardArray[squareNum] = player1.XorO;
+				document.querySelector(".current-player").innerText = "Current Player: " + player2.XorO;
 			} else {
 				event.target.innerText = player2.XorO;
 				boardArray[squareNum] = player2.XorO;
+				document.querySelector(".current-player").innerText = "Current Player: " + player1.XorO;
 			}
 			console.log(boardArray);
 
@@ -83,9 +94,11 @@ document.addEventListener("DOMContentLoaded", function(event){
 			if (numberOfPlays <= 7) {
 				var isWin = isWinningState();
 				if (isWin !== false) {
-					alert("the winner is " + isWin);
+					alert("THE WINNER IS " + isWin);
+					initializeGame();
 				} else if (isWin === false && numberOfPlays === 0) {
-					alert("It's a tie!");
+					alert("IT'S A TIE!");
+					initializeGame();
 				}
 			}
 		}
