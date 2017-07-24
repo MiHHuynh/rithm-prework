@@ -51,17 +51,10 @@ $(document).ready(function(){
 				}
 			}
 		}).then(function(){
-			window.scrollTo(0,9999999);
+			window.scrollTo(0,document.body.scrollHeight);
 		}).catch(function(error){
 		    console.log(error);
 		}); // end ajax block
-
-		// location.href = "#food-link";
-
-		// $(document.body).animate({
-		//     'scrollTop': $('#food-link').offset().top
-		// }, 200);
-
 	});
 });
 
