@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Recipe Finder</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<img src="fatcatcookie.jpeg" class="img-responsive">
+	<h1>Nomz</h1>
+	<h4>What should I make today?</h4>
+	<form class="form-inline" id="search-form">
+		<select class="form-control" id="meal-dropdown">
+			<option>Breakfast</option>
+			<option>Lunch</option>
+			<option>Dinner</option>
+			<option>Give me an entire day's worth!</option>
+		</select>
+		<div class="input-group form-group">
+			<input type="text" id="ingredients" class="form-control" placeholder="List ingredients or keywords separated by space, or leave blank for a surprise!">
+			<div class="input-group-btn">
+				<button class="btn btn-danger search-recipes" type="submit">
+					<span class="glyphicon glyphicon-search"></span>
+				</button>
+			</div>
+		</div>
+	</form>
+	<h6>Powered by food2fork API</h6>
+
+	<div class="recipe-container row" id="recipe-container">
+		<div class="meal breakfast col-md-4">
+		</div>
+		<div class="meal lunch col-md-4">
+		</div>
+		<div class="meal dinner col-md-4">
+		</div>
+	</div><a href="#food-link"></a>
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
